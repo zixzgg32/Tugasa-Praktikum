@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Zhorif"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-24 08:50:44 PM"/>
+        <attribute name="created" value="WmhvcmlmO0RFU0tUT1AtNDc4RU4yUTsyMDIzLTA5LTIxOzA3OjM4OjAxIEFNOzI5MTc="/>
+        <attribute name="edited" value="WmhvcmlmO0RFU0tUT1AtNDc4RU4yUTsyMDIzLTA5LTI0OzA4OjUwOjQ0IFBNOzM7MzA0Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama, jenisKelamin" type="String" array="False" size=""/>
+            <declare name="nim, umur, b3nim" type="Integer" array="False" size=""/>
+            <declare name="tinggiBadan, beratBadan" type="Real" array="False" size=""/>
+            <output expression="&quot;Nama anda!&quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;NIM anda!&quot;" newline="True"/>
+            <input variable="nim"/>
+            <while expression="nim&lt;999999999 or nim&gt;9999999999">
+                <output expression="&quot;Tolong masukkan NIM yang benar!&quot;" newline="True"/>
+                <input variable="nim"/>
+            </while>
+            <output expression="&quot;Jenis kelamin anda! [pria atau wanita]&quot;" newline="True"/>
+            <input variable="jenisKelamin"/>
+            <while expression="jenisKelamin!=&quot;pria&quot; and jenisKelamin!=&quot;wanita&quot;">
+                <output expression="&quot;Tolong masukkan jenis kelamin sesuai ketentuan!&quot;" newline="True"/>
+                <input variable="jenisKelamin"/>
+            </while>
+            <output expression="&quot;Umur anda!&quot;" newline="True"/>
+            <input variable="umur"/>
+            <while expression="umur&lt;0">
+                <output expression="&quot;Tolong masukkan umur yang benar!&quot;" newline="True"/>
+                <input variable="umur"/>
+            </while>
+            <output expression="&quot;Tinggi badan anda dalam satuan centimeter dengan akurasi satu angka dibelakang koma!&quot;" newline="True"/>
+            <input variable="tinggiBadan"/>
+            <while expression="tinggiBadan&lt;0">
+                <output expression="&quot;Tolong masukkan tinggi badan sesuai ketentuan!&quot;" newline="True"/>
+                <input variable="tinggiBadan"/>
+            </while>
+            <output expression="&quot;Berart badan anda dalam satuan kilogram dengan akurasi satu angka dibelakang koma!&quot;" newline="True"/>
+            <input variable="beratBadan"/>
+            <while expression="beratBadan&lt;0">
+                <output expression="&quot;Tolong masukkan berat badan sesuai ketentuan!&quot;" newline="True"/>
+                <input variable="beratBadan"/>
+            </while>
+            <output expression="&quot;Tiga angka terakhir NIM&quot;" newline="True"/>
+            <input variable="b3nim"/>
+            <while expression="b3nim&lt;0 or b3nim&gt;999">
+                <output expression="&quot;TIGA ANGKA TERAKHIR NIM&quot;" newline="True"/>
+                <input variable="b3nim"/>
+            </while>
+            <output expression="&quot;Nama saya &quot;&amp;nama&amp;&quot; dengan NIM &quot;&amp;nim&amp;&quot;, saya berjenis kelamin &quot;&amp;jenisKelamin&amp;&quot; dan berumur &quot;&amp;umur&amp;&quot; tahun. Tinggi badan saya dan berat badan saya adalah &quot;&amp;tinggiBadan&amp;&quot; cm dan &quot;&amp;beratBadan&amp;&quot; kg. &quot;&amp;b3nim&amp;&quot; dimodulus 4 = &quot;&amp;b3nim%4" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
